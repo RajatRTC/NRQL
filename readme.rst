@@ -12,4 +12,4 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 ``CPU Usage``
 .. code:: bash
 
-    SELECT latest(host.cpuPercent) FROM Metric WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2OTI2MTI1NzY3MDQ1Njg1ODI' TIMESERIES auto
+    $ pip install newrelic

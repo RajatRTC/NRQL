@@ -71,7 +71,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
     SELECT latest(host.disk.usedPercent) as 'Used %' FROM Metric FACET device WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2OTI2MTI1NzY3MDQ1Njg1ODI' LIMIT MAX 
 
-.. image:: Images/04_disk.jpeg
+.. image:: Images/06_disk.jpeg
   :width: 400
   :alt: Disk Usage
   :align: center

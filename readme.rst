@@ -1,4 +1,4 @@
 |header|
 
-.. |header| Demo of New Relic Agent Dashboard
+Demo of New Relic Agent Dashboard
 ======================

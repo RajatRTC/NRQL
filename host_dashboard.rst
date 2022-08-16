@@ -19,6 +19,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 .. image:: Images/01_cpu_usage.jpg
   :width: 400
   :alt: CPU Usage
+  :align: center
 
 **Example 2:** ``Network Traffic``
 
@@ -29,6 +30,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 .. image:: Images/02_network_traffic.jpg
   :width: 400
   :alt: Network Traffic
+  :align: center
 
 **Example 3:** ``Process Running``
 
@@ -39,6 +41,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 .. image:: Images/03_process_running.jpg
   :width: 400
   :alt: Process Running
+  :align: center
 
 **Example 4:** ``Memory(in bytes)``
 
@@ -49,6 +52,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 .. image:: Images/04_memory.jpg
   :width: 400
   :alt: Memory
+  :align: center
   
 **Example 5:** ``Storage(in bytes)``
 
@@ -59,6 +63,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 .. image:: Images/06_storage.jpg
   :width: 400
   :alt: Storage
+  :align: center
   
 **Example 6:** ``Disk Usage``
 
@@ -69,6 +74,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 .. image:: Images/06_disk_usage.jpg
   :width: 400
   :alt: Disk Usage
+  :align: center
   
 **Example 7:** ``Latest Load``
 
@@ -79,3 +85,4 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 .. image:: Images/07_latest_load.jpg
   :width: 400
   :alt: Latest Load
+  :align: center

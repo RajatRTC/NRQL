@@ -1,7 +1,3 @@
-|header|
-
-.. |header| text:: Demo of New Relic Agent Dashboard
-
 Demo of New Relic Agent Dashboard
 ======================
 

@@ -49,7 +49,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
     SELECT latest(host.memoryUsedBytes) AS 'Memory Used', latest(host.memoryFreeBytes) AS 'Memory Free' FROM Metric WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2OTI2MTI1NzY3MDQ1Njg1ODI' TIMESERIES auto
 
-.. image:: Images/04_memory.jpg
+.. image:: Images/04_memory.jpeg
   :width: 400
   :alt: Memory
   :align: center

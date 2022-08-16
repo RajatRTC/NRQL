@@ -29,3 +29,16 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 .. image:: Images/02_network_traffic.jpg
   :width: 400
   :alt: Network Traffic
+
+.. list-table:: Title
+   :widths: 50 50
+   :header-rows: 1
+   
+  * - **Example 1:** ``CPU Usage``
+    - **Example 2:** ``Network Traffic``
+  * - Row 1, column 1
+    -
+  * - Row 2, column 1
+    - .. image:: Images/02_network_traffic.jpg
+        :width: 400
+        :alt: Network Traffic

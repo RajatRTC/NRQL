@@ -25,7 +25,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
 .. code:: bash
 
-    SELECT latest(transmitBytesPerSecond) AS 'Transmit bytes per second', max(receiveBytesPerSecond) AS 'Receive bytes per second' FROM NetworkSample WHERE fullHostname = 'server.debian.com' TIMESERIES SINCE 1800 seconds ago EXTRAPOLATE
+    SELECT latest(host.net.transmitBytesPerSecond) AS 'Transmit bytes per second', average(host.net.receiveBytesPerSecond) AS 'Receive bytes per second' FROM Metric WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2MDk1MzY3ODY2MjIwMjg1NTQ3' TIMESERIES auto
 
 .. image:: Images/02_network_traffics.jpeg
   :width: 400
@@ -94,3 +94,21 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 .. code:: bash
 
     SELECT latest(host.disk.usedPercent) as 'Storage used %' FROM Metric WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2MDk1MzY3ODY2MjIwMjg1NTQ3' TIMESERIES since 8 hour ago    
+
+**Example 11:** ``Disk Used (in percentage)``
+
+.. code:: bash
+
+    SELECT latest(host.disk.usedPercent) as 'Used %' FROM Metric FACET device WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2MDk1MzY3ODY2MjIwMjg1NTQ3' LIMIT MAX
+    
+**Example 12:** ``Disk Used (in percentage)``
+
+.. code:: bash
+
+    SELECT latest(host.disk.usedPercent) as 'Used %' FROM Metric FACET device WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2MDk1MzY3ODY2MjIwMjg1NTQ3' LIMIT MAX
+    
+**Example 12:** ``Memory Usage (Max)``
+
+.. code:: bash
+
+    SELECT max(memoryUsedBytes / memoryTotalBytes * 100) AS 'Used %', max(memoryFreeBytes / memoryTotalBytes * 100) AS 'Free %' FROM SystemSample WHERE hostname = 'server' TIMESERIES SINCE 7200 seconds ago EXTRAPOLATE

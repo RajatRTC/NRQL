@@ -9,7 +9,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
 **Dashboard**
 
-``CPU Usage``
+Example 1: ``CPU Usage``
 
 .. code:: bash
 

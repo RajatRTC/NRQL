@@ -29,3 +29,53 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 .. image:: Images/02_network_traffic.jpg
   :width: 400
   :alt: Network Traffic
+
+**Example 3:** ``Process Running``
+
+.. code:: bash
+
+    SELECT latest(host.process.cpuPercent) as 'CPU %', latest(host.process.threadCount) as 'Threads' FROM Metric FACET processId, processDisplayName WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2OTI2MTI1NzY3MDQ1Njg1ODI' ORDER BY cpuPercent asc LIMIT MAX
+
+.. image:: Images/03_process_running.jpg
+  :width: 400
+  :alt: Process Running
+
+**Example 4:** ``Memory(in bytes)``
+
+.. code:: bash
+
+    SELECT latest(host.memoryUsedBytes) AS 'Memory Used', latest(host.memoryFreeBytes) AS 'Memory Free' FROM Metric WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2OTI2MTI1NzY3MDQ1Njg1ODI' TIMESERIES auto
+
+.. image:: Images/04_memory.jpg
+  :width: 400
+  :alt: Memory
+  
+**Example 5:** ``Storage(in bytes)``
+
+.. code:: bash
+
+    SELECT Latest(host.disk.usedBytes) as 'Storage used', latest(host.disk.freeBytes) As 'Storage Free' FROM Metric WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2OTI2MTI1NzY3MDQ1Njg1ODI' TIMESERIES auto
+
+.. image:: Images/06_storage.jpg
+  :width: 400
+  :alt: Storage
+  
+**Example 6:** ``Disk Usage``
+
+.. code:: bash
+
+    SELECT latest(host.disk.usedPercent) as 'Used %' FROM Metric FACET device WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2OTI2MTI1NzY3MDQ1Njg1ODI' LIMIT MAX 
+
+.. image:: Images/06_disk_usage.jpg
+  :width: 400
+  :alt: Disk Usage
+  
+**Example 7:** ``Latest Load``
+
+.. code:: bash
+
+    SELECT latest(host.loadAverageOneMinute) as '1 minute', latest(host.loadAverageFiveMinute) AS '5 minutes', latest(host.loadAverageFifteenMinute) AS '15 minutes' FROM Metric WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2OTI2MTI1NzY3MDQ1Njg1ODI' TIMESERIES auto
+
+.. image:: Images/07_latest_load.jpg
+  :width: 400
+  :alt: Latest Load

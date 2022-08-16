@@ -9,10 +9,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
 **Dashboard**
 
-<snippet>
-  <content><![CDATA[
-.. include:: ${1:filename}
+``CPU Usage``
+.. code:: bash
 
-]]></content>
-  <tabTrigger>inc</tabTrigger> 
-</snippet>
+    SELECT latest(host.cpuPercent) FROM Metric WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2OTI2MTI1NzY3MDQ1Njg1ODI' TIMESERIES auto

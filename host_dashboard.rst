@@ -10,40 +10,35 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 **Dashboard of Host**
 -----
 
-**Example 1:** ``CPU Usage``
+**Example 1:** ``CPU Usage(Max)``
 
 .. code:: bash
 
-    SELECT latest(host.cpuPercent) FROM Metric WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2OTI2MTI1NzY3MDQ1Njg1ODI' TIMESERIES auto
+    SELECT max(cpuSystemPercent) AS 'System', max(cpuIOWaitPercent) AS 'I/O wait', max(cpuUserPercent) AS 'User', max(cpuStealPercent) AS 'Steal' FROM SystemSample WHERE fullHostname = 'server.debian.com' TIMESERIES SINCE 7200 seconds ago EXTRAPOLATE
 
 .. image:: Images/01_cpu_usages.jpeg
   :width: 400
   :alt: CPU Usage
   :align: center
 
-**Example 2:** ``Network Traffic``
+**Example 2:** ``Network Traffic/Utilization``
 
 .. code:: bash
 
-    SELECT latest(host.net.transmitBytesPerSecond) AS 'Transmit bytes per second', latest(host.net.receiveBytesPerSecond) AS 'Receive bytes per second' FROM Metric WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2OTI2MTI1NzY3MDQ1Njg1ODI' TIMESERIES auto
+    SELECT latest(transmitBytesPerSecond) AS 'Transmit bytes per second', max(receiveBytesPerSecond) AS 'Receive bytes per second' FROM NetworkSample WHERE fullHostname = 'server.debian.com' TIMESERIES SINCE 1800 seconds ago EXTRAPOLATE
 
 .. image:: Images/02_network_traffics.jpeg
   :width: 400
   :alt: Network Traffic
   :align: center
 
-**Example 3:** ``Process Running``
+**Example 3:** ``Current Process Running``
 
 .. code:: bash
 
-    SELECT latest(host.process.cpuPercent) as 'CPU %', latest(host.process.threadCount) as 'Threads' FROM Metric FACET processId, processDisplayName WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2OTI2MTI1NzY3MDQ1Njg1ODI' ORDER BY cpuPercent asc LIMIT MAX
+    SELECT latest(host.process.cpuPercent) as 'CPU %', latest(host.process.threadCount) as 'Threads' FROM Metric FACET processId, processDisplayName WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2MDk1MzY3ODY2MjIwMjg1NTQ3' ORDER BY cpuPercent asc LIMIT MAX
 
-.. image:: Images/03_process_running.jpg
-  :width: 400
-  :alt: Process Running
-  :align: center
-
-**Example 4:** ``Memory(in bytes)``
+**Example 4:** ``Memory(in percentage)``
 
 .. code:: bash
 
@@ -54,24 +49,31 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
   :alt: Memory
   :align: center
   
-**Example 5:** ``Storage(in bytes)``
+**Example 5:** ``Storage Used (in bytes)``
 
 .. code:: bash
 
-    SELECT Latest(host.disk.usedBytes) as 'Storage used', latest(host.disk.freeBytes) As 'Storage Free' FROM Metric WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2OTI2MTI1NzY3MDQ1Njg1ODI' TIMESERIES auto
+    SELECT count(diskUsedBytes) FROM SystemSample WHERE fullHostname = 'server.debian.com' SINCE 1800 seconds ago EXTRAPOLATE
 
 .. image:: Images/05_disk_used.jpeg
   :width: 400
   :alt: Storage
   :align: center  
   
-**Example 6:** ``Latest Load``
+**Example 6:** ``Storage Free (in bytes)``
+
+.. code:: bash
+
+    SELECT count(diskFreeBytes) FROM StorageSample WHERE fullHostname = 'server.debian.com' SINCE 1800 seconds ago EXTRAPOLATE
+
+.. image:: Images/06_disk_free.jpeg
+  :width: 400
+  :alt: Latest Load
+  :align: center
+  
+**Example 7:** ``Latest Load``
 
 .. code:: bash
 
     SELECT latest(host.loadAverageOneMinute) as '1 minute', latest(host.loadAverageFiveMinute) AS '5 minutes', latest(host.loadAverageFifteenMinute) AS '15 minutes' FROM Metric WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2OTI2MTI1NzY3MDQ1Njg1ODI' TIMESERIES auto
 
-.. image:: Images/06_latest_load.jpg
-  :width: 400
-  :alt: Latest Load
-  :align: center

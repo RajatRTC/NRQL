@@ -60,29 +60,18 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
     SELECT Latest(host.disk.usedBytes) as 'Storage used', latest(host.disk.freeBytes) As 'Storage Free' FROM Metric WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2OTI2MTI1NzY3MDQ1Njg1ODI' TIMESERIES auto
 
-.. image:: Images/06_storage.jpg
+.. image:: Images/05_disk_used.jpg
   :width: 400
   :alt: Storage
-  :align: center
+  :align: center  
   
-**Example 6:** ``Disk Usage``
-
-.. code:: bash
-
-    SELECT latest(host.disk.usedPercent) as 'Used %' FROM Metric FACET device WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2OTI2MTI1NzY3MDQ1Njg1ODI' LIMIT MAX 
-
-.. image:: Images/06_disk.jpeg
-  :width: 400
-  :alt: Disk Usage
-  :align: center
-  
-**Example 7:** ``Latest Load``
+**Example 6:** ``Latest Load``
 
 .. code:: bash
 
     SELECT latest(host.loadAverageOneMinute) as '1 minute', latest(host.loadAverageFiveMinute) AS '5 minutes', latest(host.loadAverageFifteenMinute) AS '15 minutes' FROM Metric WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2OTI2MTI1NzY3MDQ1Njg1ODI' TIMESERIES auto
 
-.. image:: Images/07_latest_load.jpg
+.. image:: Images/06_latest_load.jpg
   :width: 400
   :alt: Latest Load
   :align: center

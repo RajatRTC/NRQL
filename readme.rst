@@ -7,3 +7,4 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
 .. _New Relic: http://newrelic.com
 
+<b>Dashboard</b>

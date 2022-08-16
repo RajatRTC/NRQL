@@ -36,9 +36,16 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
    
   * - **Example 1:** ``CPU Usage``
     - **Example 2:** ``Network Traffic``
-  * - Row 1, column 1
-    -
-  * - Row 2, column 1
+  * - .. code:: bash
+
+    SELECT latest(host.cpuPercent) FROM Metric WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2OTI2MTI1NzY3MDQ1Njg1ODI' TIMESERIES auto
+
+    - .. code:: bash
+
+    SELECT latest(host.net.transmitBytesPerSecond) AS 'Transmit bytes per second', latest(host.net.receiveBytesPerSecond) AS 'Receive bytes per second' FROM Metric WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2OTI2MTI1NzY3MDQ1Njg1ODI' TIMESERIES auto
+  * - .. image:: Images/01_cpu_usage.jpg
+        :width: 400
+        :alt: CPU Usage
     - .. image:: Images/02_network_traffic.jpg
         :width: 400
         :alt: Network Traffic

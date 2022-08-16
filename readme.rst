@@ -15,5 +15,5 @@ Example 1: ``CPU Usage``
 
     SELECT latest(host.cpuPercent) FROM Metric WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2OTI2MTI1NzY3MDQ1Njg1ODI' TIMESERIES auto
 
-.. image:: 
+.. image:: Images/01_cpu_usage.jpg
   :width: 400

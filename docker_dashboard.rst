@@ -50,7 +50,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
     FROM ContainerSample SELECT name, state, status, cpuShares, restartCount, storage, imageName where fullHostname ='server.debian.com'And state !='running' since 30 minute ago  LIMIT MAX
 
 .. image:: Images/04_container_status.jpeg
-  :width: Auto
+  :width: 600
   :alt: Container Status
   :align: center
   

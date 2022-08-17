@@ -61,7 +61,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
     FROM ContainerSample SELECT latest(networkRxBytes), latest(networkTxBytes) WHERE host ='server' TIMESERIES AUTO 
 
 .. image:: Images/05_network_rx_tx.jpeg
-  :width: 400
+  :width: 500
   :alt: Network Rx/Tx(in bytes)
   :align: center  
   
@@ -72,7 +72,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
     FROM ContainerSample SELECT latest(networkRxErrors), latest(networkTxErrors) where host ='server' TIMESERIES AUTO SINCE today
 
 .. image:: Images/06_network_rx_tx_error.jpeg
-  :width: 400
+  :width: 500
   :alt: Network Rx/Tx Error(in bytex)
   :align: center
   

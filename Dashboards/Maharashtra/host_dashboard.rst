@@ -38,7 +38,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
     SELECT latest(host.process.cpuPercent) as 'CPU %', latest(host.process.threadCount) as 'Threads' FROM Metric FACET processId, processDisplayName WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2MDk1MzY3ODY2MjIwMjg1NTQ3' ORDER BY cpuPercent asc LIMIT MAX
 
-**Example 4:** ``Memory(in percentage)``
+**Example 4:** ``Memory(in Bytes)``
 
 .. code:: bash
 

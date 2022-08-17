@@ -16,7 +16,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
     FROM ContainerSample SELECT latest(cpuPercent) FACET name where host ='server' limit max
 
-.. image:: Images/01_container_cpu.jpeg
+.. image:: ../Images/Maharashtra/01_container_cpu.jpeg
   :width: 400
   :alt: Container CPU Usage
   :align: center
@@ -27,7 +27,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
     FROM ContainerSample SELECT latest(memoryUsageBytes) FACET name WHERE hostname = 'server' limit max
 
-.. image:: Images/02_memory_usage.jpeg
+.. image:: ../Images/Maharashtra/02_memory_usage.jpeg
   :width: 400
   :alt: Memory Usage
   :align: center
@@ -38,7 +38,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
     SELECT uniqueCount(containerId) FROM ContainerSample WHERE fullHostname = 'server.debian.com' SINCE 5 minutes ago EXTRAPOLATE
 
-.. image:: Images/03_total_container.jpeg
+.. image:: ../Images/Maharashtra/03_total_container.jpeg
   :width: 400
   :alt: Total Containers
   :align: center
@@ -49,7 +49,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
     FROM ContainerSample SELECT name, state, status, cpuShares, restartCount, storage, imageName where fullHostname ='server.debian.com'And state !='running' since 30 minute ago  LIMIT MAX
 
-.. image:: Images/04_container_status.jpeg
+.. image:: ../Images/Maharashtra/04_container_status.jpeg
   :width: 600
   :alt: Container Status
   :align: center
@@ -60,7 +60,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
     FROM ContainerSample SELECT latest(networkRxBytes), latest(networkTxBytes) WHERE host ='server' TIMESERIES AUTO 
 
-.. image:: Images/05_network_rx_tx.jpeg
+.. image:: ../Images/Maharashtra/05_network_rx_tx.jpeg
   :width: 500
   :alt: Network Rx/Tx(in bytes)
   :align: center  
@@ -71,7 +71,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
     FROM ContainerSample SELECT latest(networkRxErrors), latest(networkTxErrors) where host ='server' TIMESERIES AUTO SINCE today
 
-.. image:: Images/06_network_rx_tx_error.jpeg
+.. image:: ../Images/Maharashtra/06_network_rx_tx_error.jpeg
   :width: 500
   :alt: Network Rx/Tx Error(in bytex)
   :align: center

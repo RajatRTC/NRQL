@@ -16,7 +16,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
     SELECT max(cpuSystemPercent) AS 'System', max(cpuIOWaitPercent) AS 'I/O wait', max(cpuUserPercent) AS 'User', max(cpuStealPercent) AS 'Steal' FROM SystemSample WHERE fullHostname = 'server.debian.com' TIMESERIES SINCE 7200 seconds ago EXTRAPOLATE
 
-.. image:: ../Images/Maharashtra/01_cpu_usages.jpeg
+.. image:: ../../Images/Maharashtra/01_cpu_usages.jpeg
   :width: 400
   :alt: CPU Usage
   :align: center
@@ -27,7 +27,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
     SELECT latest(host.net.transmitBytesPerSecond) AS 'Transmit bytes per second', average(host.net.receiveBytesPerSecond) AS 'Receive bytes per second' FROM Metric WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2MDk1MzY3ODY2MjIwMjg1NTQ3' TIMESERIES auto
 
-.. image:: ../Images/Maharashtra/02_network_traffics.jpeg
+.. image:: ../../Images/Maharashtra/02_network_traffics.jpeg
   :width: 400
   :alt: Network Traffic
   :align: center
@@ -44,7 +44,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
     SELECT latest(host.memoryUsedBytes) AS 'Memory Used', latest(host.memoryFreeBytes) AS 'Memory Free' FROM Metric WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2OTI2MTI1NzY3MDQ1Njg1ODI' TIMESERIES auto
 
-.. image:: ../Images/Maharashtra/04_memory.jpeg
+.. image:: ../../Images/Maharashtra/04_memory.jpeg
   :width: 400
   :alt: Memory
   :align: center
@@ -55,7 +55,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
     SELECT count(diskUsedBytes) FROM SystemSample WHERE fullHostname = 'server.debian.com' SINCE 1800 seconds ago EXTRAPOLATE
 
-.. image:: ../Images/Maharashtra/05_disk_used.jpeg
+.. image:: ../../Images/Maharashtra/05_disk_used.jpeg
   :width: 400
   :alt: Storage
   :align: center  
@@ -66,7 +66,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
     SELECT count(diskFreeBytes) FROM StorageSample WHERE fullHostname = 'server.debian.com' SINCE 1800 seconds ago EXTRAPOLATE
 
-.. image:: ../Images/Maharashtra/06_disk_free.jpeg
+.. image:: ../../Images/Maharashtra/06_disk_free.jpeg
   :width: 400
   :alt: Latest Load
   :align: center

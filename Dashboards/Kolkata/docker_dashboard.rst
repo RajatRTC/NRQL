@@ -16,7 +16,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
     FROM ContainerSample SELECT latest(cpuPercent) FACET name where host ='vibkol' limit max
 
-.. image:: ../Images/kolkata/01_container_cpu.jpeg
+.. image:: .././Images/kolkata/01_container_cpu.jpeg
   :width: 400
   :alt: Container CPU Usage
   :align: center

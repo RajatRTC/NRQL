@@ -83,26 +83,32 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
     SELECT latest(host.cpuPercent) AS 'CPU used %' FROM Metric WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2MDk1MzY3ODY2MjIwMjg1NTQ3' TIMESERIES since 10 hour ago WITH TIMEZONE 'Asia/Kolkata'
     
-**Example 9:** ``CPU Usage (Latest)``
+**Example 9:** ``Memory Free (in percent)``
 
 .. code:: bash
 
-    SELECT latest(host.cpuPercent) AS 'CPU used %' FROM Metric WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2MDk1MzY3ODY2MjIwMjg1NTQ3' TIMESERIES since 10 hour ago WITH TIMEZONE 'Asia/Kolkata'
-    
-**Example 10:** ``Storage Usage (in percentage)``
+    SELECT latest(host.memoryFreePercentPercent) AS 'Memory used %' FROM Metric WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2MDk1MzY3ODY2MjIwMjg1NTQ3' TIMESERIES Since 8 hour ago
+
+**Example 10:** ``Memory Used (in percent)``
+
+.. code:: bash
+
+    SELECT latest(host.memoryUsedPercent) AS 'Memory used %' FROM Metric WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2MDk1MzY3ODY2MjIwMjg1NTQ3' TIMESERIES Since 8 hour ago
+
+**Example 11:** ``Storage Usage (in percentage)``
 
 .. code:: bash
 
     SELECT latest(host.disk.usedPercent) as 'Storage used %' FROM Metric WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2MDk1MzY3ODY2MjIwMjg1NTQ3' TIMESERIES since 8 hour ago    
 
-**Example 11:** ``Disk Used (in percentage)``
+**Example 12:** ``Disk Used (in percentage)``
 
 .. code:: bash
 
     SELECT latest(host.disk.usedPercent) as 'Used %' FROM Metric FACET device WHERE `entityGuid` = 'MzU2NDQ4NnxJTkZSQXxOQXw2MDk1MzY3ODY2MjIwMjg1NTQ3' LIMIT MAX
     
     
-**Example 12:** ``Memory Usage (Max)``
+**Example 13:** ``Memory Usage (Max)``
 
 .. code:: bash
 

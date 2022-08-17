@@ -14,7 +14,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
 .. code:: bash
 
-    FROM ContainerSample SELECT latest(cpuPercent) FACET name where host ='server' limit max
+    FROM ContainerSample SELECT latest(cpuPercent) FACET name where host ='vibkol' limit max
 
 .. image:: ../Images/kolkata/01_container_cpu.jpeg
   :width: 400
@@ -25,7 +25,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
 .. code:: bash
 
-    FROM ContainerSample SELECT latest(memoryUsageBytes) FACET name WHERE hostname = 'server' limit max
+    FROM ContainerSample SELECT latest(memoryUsageBytes) FACET name WHERE hostname = 'vibkol' limit max
 
 .. image:: ../Images/kolkata/02_memory_usage.jpeg
   :width: 400
@@ -36,7 +36,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
 .. code:: bash
 
-    SELECT uniqueCount(containerId) FROM ContainerSample WHERE fullHostname = 'server.debian.com' SINCE 5 minutes ago EXTRAPOLATE
+    SELECT uniqueCount(containerId) FROM ContainerSample WHERE fullHostname = 'vibkol' SINCE 60 seconds ago EXTRAPOLATE
 
 .. image:: ../Images/kolkata/03_total_container.jpeg
   :width: 400
@@ -47,7 +47,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
 .. code:: bash
 
-    FROM ContainerSample SELECT name, state, status, cpuShares, restartCount, storage, imageName where fullHostname ='server.debian.com'And state !='running' since 30 minute ago  LIMIT MAX
+    FROM ContainerSample SELECT name, state, status, cpuShares, restartCount, imageName where fullHostname ='vibkol' since 30 minute ago  LIMIT MAX
 
 .. image:: ../Images/kolkata/04_container_status.jpeg
   :width: 600
@@ -58,7 +58,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
 .. code:: bash
 
-    FROM ContainerSample SELECT latest(networkRxBytes), latest(networkTxBytes) WHERE host ='server' TIMESERIES AUTO 
+    FROM ContainerSample SELECT latest(networkRxBytes), latest(networkTxBytes) WHERE host ='vibkol' TIMESERIES AUTO
 
 .. image:: ../Images/kolkata/05_network_rx_tx.jpeg
   :width: 500
@@ -69,7 +69,7 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
 .. code:: bash
 
-    FROM ContainerSample SELECT latest(networkRxErrors), latest(networkTxErrors) where host ='server' TIMESERIES AUTO SINCE today
+    FROM ContainerSample SELECT latest(networkRxErrors), latest(networkTxErrors) where host ='vibkol' TIMESERIES AUTO SINCE today
 
 .. image:: ../Images/kolkata/06_network_rx_tx_error.jpeg
   :width: 500
@@ -80,4 +80,4 @@ A ``New relic`` agent is a piece of software that you install on a host or in an
 
 .. code:: bash
 
-    SELECT uniqueCount(containerId) FROM ContainerSample WHERE fullHostname = 'server.debian.com' TIMESERIES AUTO SINCE today
+    SELECT uniqueCount(containerId) FROM ContainerSample WHERE fullHostname = 'vibkol' TIMESERIES AUTO SINCE today

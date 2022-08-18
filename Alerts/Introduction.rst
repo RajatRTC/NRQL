@@ -19,4 +19,4 @@ Lets take Overview of Alerts:
 
 **Step 4:** Click on ``Overview``.
 
-**Overview**: Find your most recent open, closed, and muted violations.
+``**Overview**``: Find your most recent open, closed, and muted violations.

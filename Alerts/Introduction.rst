@@ -9,7 +9,7 @@ Lets take Overview of Alerts:
 -----------
 
 **Step 1:** Already Have an Account on ``New Relic``.  
-            **`Login`_**
+`Login`_
 
 .. _Login: https://one.newrelic.com/
 

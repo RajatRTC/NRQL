@@ -7,4 +7,4 @@ Alerts lets you define the conditions in your system that you want to be notifie
 
 Already Have an Account on ``New Relic``.  `Login`_
 
-.. _New Relic: https://one.newrelic.com/
+.. _Login: https://one.newrelic.com/

@@ -15,7 +15,7 @@ Lets take Overview of Alerts:
 
 **Step 2:** Go to Top Navbar.
 
-**Step 3:** Click on ``Alert & AI`.`
+**Step 3:** Click on ``Alert & AI``.
 
 **Step 4:** Click on ``Overview``.
 

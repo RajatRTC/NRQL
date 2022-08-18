@@ -19,4 +19,8 @@ Lets take Overview of Alerts:
 
 **Step 4:** Click on ``Overview``.
 
-``**Overview**``: Find your most recent open, closed, and muted violations.
+.. image:: ../Images/Alerts/01_alert_overview.png
+  :width: 400
+  :alt: Container CPU Usage
+  :align: center
+``Overview``: Find your most recent open, closed, and muted violations.

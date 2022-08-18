@@ -13,4 +13,6 @@ Lets take Overview of Alerts:
 
 .. _Login: https://one.newrelic.com/
 
+**Step 2:** Go to Top Navbar
+
 

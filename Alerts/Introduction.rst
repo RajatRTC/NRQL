@@ -13,6 +13,10 @@ Lets take Overview of Alerts:
 
 .. _Login: https://one.newrelic.com/
 
-**Step 2:** Go to Top Navbar
+**Step 2:** Go to Top Navbar.
+
+**Step 3:** Click on ``Alert & AI`.`
+
+**Step 4:** Click on ``Overview``.
 
 

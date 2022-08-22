@@ -55,7 +55,7 @@ Now your Alert condition is created.
 **Step 4:** Find your ``created Policies``.
 
 Thanks
-
+-----
 
 Go to `Bangalore Server`_
 

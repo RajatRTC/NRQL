@@ -62,5 +62,5 @@ Go to `Bangalore Server`_
 
 Go to `Kolkata Server`_
 
-.. _Bangalore Server: http://newrelic.com
-.. _Kolkata Server: http://newrelic.com
+.. _Bangalore Server: https://github.com/RajatRTC/NRQL/blob/main/Alerts/Container/Container%20Added%20Alert/Bangalore.rst
+.. _Kolkata Server: https://github.com/RajatRTC/NRQL/blob/main/Alerts/Container/Container%20Added%20Alert/Kolkata.rst

@@ -63,4 +63,4 @@ Go to `Bangalore Server`_
 Go to `Kolkata Server`_
 
 .. _Bangalore Server: https://github.com/RajatRTC/NRQL/blob/main/Alerts/System/Shutdown%20Alert/Bangalore.rst
-.. _Kolkata Server: https://github.com/RajatRTC/NRQL/blob/main/Alerts/Shutdown%20Alert/Kolkata.rst
+.. _Kolkata Server: https://github.com/RajatRTC/NRQL/blob/main/Alerts/System/Shutdown%20Alert/Kolkata.rst

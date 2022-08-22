@@ -63,4 +63,4 @@ Go to `Kolkata Server`_
 Go to `Maharashtra Server`_
 
 .. _Kolkata Server: https://github.com/RajatRTC/NRQL/blob/main/Alerts/System/Shutdown%20Alert/Kolkata.rst
-.. _Maharashtra Server: https://github.com/RajatRTC/NRQL/blob/main/Alerts/Shutdown%20Alert/Maharashtra.rst
+.. _Maharashtra Server: https://github.com/RajatRTC/NRQL/blob/main/Alerts/System/Shutdown%20Alert/Maharashtra.rst

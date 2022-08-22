@@ -60,7 +60,7 @@ Thanks
 
 Go to `Maharashtra Server`_
 
-Go to `Kolkata Server`_
+Go to `Bangalore Server`_
 
 .. _Maharashtra Server: https://github.com/RajatRTC/NRQL/blob/main/Alerts/Container/Container%20Added%20Alert/Maharashtra.rst
-.. _Kolkata Server: http://newrelic.com
+.. _Bangalore Server: https://github.com/RajatRTC/NRQL/blob/main/Alerts/Container/Container%20Added%20Alert/Bangalore.rst

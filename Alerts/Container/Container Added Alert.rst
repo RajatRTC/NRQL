@@ -3,6 +3,35 @@ Container Added Alert with New Relic Agent
 
 **Maharashtra Server**
 **Step 1:** Go to Dashboard.
+
 **Step 2:** Select Dashboard.
+
 **Step 3:** Create/ Select Releted Query.
-**Step 4:** Right click on <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" focusable="false" role="presentation"><circle cx="4" cy="8" r="1"></circle><circle cx="8" cy="8" r="1"></circle><circle cx="12" cy="8" r="1"></circle></svg>
+
+**Step 4:** Click on ``dotted line icon`` of releted query.
+
+**Step 5:** Click on ``Create Alert Condition``
+
+**Step 6:** Enter Condition Name
+
+.. code:: bash
+
+    Maharashtra Server Alert
+    
+**Step 7:** Define Signal
+
+``Enter NRQL Query``
+
+.. code:: bash
+
+    SELECT uniqueCount(containerId) FROM ContainerSample WHERE fullHostname = 'server.debian.com'
+    
+**Step 8:** Set your condition thresholds
+
+Select thresholds as ``Static``
+--------------
+
+Open violation when the ``query return the values``
+
+Critical: ``above`` ``36`` ``for atleast`` ``1 minutes``
+

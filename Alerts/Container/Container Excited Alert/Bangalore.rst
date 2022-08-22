@@ -17,7 +17,7 @@ Container Excited Alert with New Relic Agent
 
 .. code:: bash
 
-    Maharashtra Server Alert
+    Bangalore Server Alert
     
 **Step 7:** Define Signal
 

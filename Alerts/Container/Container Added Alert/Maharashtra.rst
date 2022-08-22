@@ -45,6 +45,7 @@ Now your Alert condition is created.
 
 
 **To View Alert conditions**
+-------
 
 **Step 1:** Go to Top Navbar.
 
